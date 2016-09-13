@@ -1,0 +1,16 @@
+<pre class='metadata'>
+Title: inputmode-action
+Shortname: action-hint
+Level: 1
+Status: CG-DRAFT
+Group: WICG
+Issue Tracking: https://www.github.com/WICG/action-hint/issues/
+URL: http://example.com/url-this-spec-will-live-at
+Editor: Dave Tapuska, Chromium https://chromium.org, dtapuska@chromium.org
+Abstract: A short description of your spec, one or two sentences.
+</pre>
+
+Introduction {#intro}
+=====================
+
+See https://github.com/tabatkins/bikeshed to get started.

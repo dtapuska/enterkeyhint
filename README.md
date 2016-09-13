@@ -1,5 +1,5 @@
 # action-hint
-A specification describing action-hint to label the action key on virtual keyboards
+A specification describing inputmode-action to label the action key on virtual keyboards
 ## Abstract
 The ability to set the action key on virtual keyboards is UI polish item. It allows the user to understand what action
 is going to be executed when the user presses it.
