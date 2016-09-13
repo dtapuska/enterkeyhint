@@ -4,13 +4,55 @@ Shortname: action-hint
 Level: 1
 Status: CG-DRAFT
 Group: WICG
-Issue Tracking: https://www.github.com/WICG/action-hint/issues/
-URL: http://example.com/url-this-spec-will-live-at
+URL: https://raw.githubusercontent.com/dtapuska/action-hint/master/index.html
 Editor: Dave Tapuska, Chromium https://chromium.org, dtapuska@chromium.org
-Abstract: A short description of your spec, one or two sentences.
+Abstract: This standard describes an attribute that is applicable to fields that have an editing capability. Most modern virtual keyboards allow customization of the action key and this standard brings web compatibility.
 </pre>
 
-Introduction {#intro}
-=====================
+<pre class='anchors'>
+url: https://developer.android.com/reference/android/view/inputmethod/EditorInfo.html#IME_ACTION_DONE; type: dfn; spec: ENCODING
+    text: action value
+urlPrefix: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input; type: dfn; spec: ENCODING
+    text: attr-mozactionhint
+url: https://html.spec.whatwg.org/multipage/forms.html#input-modalities:-the-inputmode-attribute; type: dfn; spec: ENCODING
+    text: inputmode
+urlPrefix: https://w3c.github.io/editing/execCommand.html; type: dfn; spec: ENCODING
+    text: editing-host
+    text: editable
+urlPrefix: https://html.spec.whatwg.org/multipage/infrastructure.html; type: dfn; spec: ENCODING
+    text: enumerated attribute
+    text: missing value default
+url: https://html.spec.whatwg.org/multipage/forms.html#attributes-common-to-form-controls; type: dfn; spec: ENCODING
+    text: form controls
+url: https://html.spec.whatwg.org/multipage/forms.html#the-form-element; type: dfn; spec: ENCODING
+    text: form
+</pre>
 
-See https://github.com/tabatkins/bikeshed to get started.
+
+Introduction {#intro}
+================
+<em>This section is non-normative.</em>
+
+Android platforms have provided the ability for native apps to customize the action key on virtual keyboards via modifiying the [=action value=]. Web authors have requested the same richness on the web platform. Mozilla has provided [=attr-mozactionhint=] and this specifcation is about standarizing that.
+
+<code>inputmode-action</code>. {#inputmode-action}
+=========
+
+The type of the virtual keyboard that is displayed is already customizable via the [=inputmode=]. The <dfn element-attr for="Element"><code>inputmode-action</code></dfn> content attribute is an [=enumerated attribute=] with the following keywords:
+
+<ul>
+    <li><dfn attr-value for="Element/inputmode-action"><code>go</code></dfn></li>
+    <li><dfn attr-value for="Element/inputmode-action"><code>done</code></dfn></li>
+    <li><dfn attr-value for="Element/inputmode-action"><code>next</code></dfn></li>
+    <li><dfn attr-value for="Element/inputmode-action"><code>search</code></dfn></li>
+    <li><dfn attr-value for="Element/inputmode-action"><code>send</code></dfn></li>
+</ul>
+
+The inputmode-action SHALL be implemented on all [=editing-host=] elements and [=form controls=].
+
+The user-agent is free to choose the [=missing value default=] based on contextual information. For example if the virtual keyboard appears on an element contained inside a [=form=] it MAY wish to use <code>send</code> as the default; otherwise <code>done</code> as the default.
+
+Internationalization {#internationization}
+============
+User agents are free to provide internationalized text or symbols representing the action on the virtual keyboard for the visual representation of individual key words.
+
