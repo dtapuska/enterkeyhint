@@ -26,6 +26,10 @@ url: https://html.spec.whatwg.org/multipage/forms.html#attributes-common-to-form
     text: form controls
 url: https://html.spec.whatwg.org/multipage/forms.html#the-form-element; type: dfn; spec: ENCODING
     text: form
+url: https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element; type: dfn; spe: ENCODING
+    text: textarea
+urlPrefix: https://html.spec.whatwg.org/multipage/interaction.html; type: dfn; spec: ENCODING
+    text: contenteditable
 </pre>
 
 
@@ -41,6 +45,7 @@ Android platforms have provided the ability for native apps to customize the act
 The type of the virtual keyboard that is displayed is already customizable via the [=inputmode=]. The <dfn element-attr for="Element"><code>inputmode-action</code></dfn> content attribute is an [=enumerated attribute=] with the following keywords:
 
 <ul>
+    <li><dfn attr-value for="Element/inputmode-action"><code>enter</code></dfn></li>
     <li><dfn attr-value for="Element/inputmode-action"><code>go</code></dfn></li>
     <li><dfn attr-value for="Element/inputmode-action"><code>done</code></dfn></li>
     <li><dfn attr-value for="Element/inputmode-action"><code>next</code></dfn></li>
@@ -50,7 +55,7 @@ The type of the virtual keyboard that is displayed is already customizable via t
 
 The inputmode-action SHALL be implemented on all [=editing-host=] elements and [=form controls=].
 
-The user-agent is free to choose the [=missing value default=] based on contextual information. For example if the virtual keyboard appears on an element contained inside a [=form=] it MAY wish to use <code>send</code> as the default; otherwise <code>done</code> as the default.
+The user-agent is free to choose the [=missing value default=] based on contextual information. For example if the virtual keyboard appears on an element contained inside a [=form=] it MAY wish to use <code>send</code> as the default; otherwise <code>done</code> as the default. [=textarea=] or [=contenteditable=] should use <code>enter</code> as the default. 
 
 Internationalization {#internationization}
 ============
