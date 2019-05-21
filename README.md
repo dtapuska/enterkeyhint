@@ -19,7 +19,7 @@ Firefox. To ship this in an interoperable approach Chrome standardized this in H
 With no ability to customize the action key, the user will see this:
 
 <input>
-![Enter](Screenshots/default.png)
+![Enter](Screenshots/Default.png)
 
 
 But with the additional keyword the developer can have a richer experience with the keyboard:
