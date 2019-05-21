@@ -12,37 +12,55 @@ The goal is to surface these actions to the web and allow the web application to
 ### HTML Spec
 
 Mozilla pioneered this by first shipping the [mozactionhint](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Using_mozactionhint_on_Firefox_mobile) in
-Firefox. To ship this in an interoperable approach Chrome standardized this in HTML spec as [enterkeyhint](https://html.spec.whatwg.org/multipage/interaction.html#attr-enterkeyhint).
+Firefox. To ship this in an interoperable approach [Chrome](https://github.com/whatwg/html/pull/3538) standardized this in HTML spec
+as [enterkeyhint](https://html.spec.whatwg.org/multipage/interaction.html#attr-enterkeyhint).
 
 ### Examples
 
-With no ability to customize the action key, the user will see this:
+With no ability to customize the action key the user will generally see this:
 
+```HTML
 <input>
+```
 ![Enter](Screenshots/Default.png)
 
 
 But with the additional keyword the developer can have a richer experience with the keyboard:
 
+```HTML
 <input enterkeyhint="enter">
+```
+
 ![Enter](Screenshots/Enter.png)
 
+```HTML
 <input enterkeyhint="go">
+```
 ![Enter](Screenshots/Go.png)
 
+```HTML
 <input enterkeyhint="done">
+```
 ![Enter](Screenshots/Done.png)
 
+```HTML
 <input enterkeyhint="next">
+```
 ![Enter](Screenshots/Next.png)
 
+```HTML
 <input enterkeyhint="previous">
+```
 ![Enter](Screenshots/Previous.png)
 
+```HTML
 <input enterkeyhint="search">
+```
 ![Enter](Screenshots/Search.png)
 
+```HTML
 <input enterkeyhint="send">
+```
 ![Enter](Screenshots/Send.png)
 
 
